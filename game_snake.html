@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            body,div,h2,p,span{
+                margin: 0;
+                padding: 0;
+            }
+            input[type="button"]{
+                font-size: 14px;
+                height: 40px;
+            }
+            span{
+                color: #fff;
+                font-size: 18px;
+            }
+            h2{
+                text-align: center;
+            }
+            p{
+                font-size: 16px;
+            }
+            #score{
+                text-align: center;
+                display: inline-block;
+                width: 80px;
+                font-size: 32px;
+                color: #f00;
+                border-bottom: 1px dotted #FFD700;
+            }
+            .wrap{
+                width: 820px;
+                height: 700px;
+                margin: 20px auto;
+            }
+            #snakeMap{
+                
+                border: 5px solid #FFD700;
+                margin: 0 auto;
+                float: left;
+            }
+            .ctrl{
+                width: 200px;
+                height: 600px;
+                float: left;
+                border: 5px solid #FFD700;
+                background: #998001;
+            }
+            .ctrl_info,.ctrl_rank,.ctrl_select{
+                height: 200px;
+                border-bottom: 1px solid #000;
+            }
+            .ctrl_title{
+                display: block;
+                width: 200px;
+                height: 30px;
+                text-align: center;
+                margin-bottom: 10px;
+                line-height: 30px;
+                font-size: 24px;
+                color: #fff;
+
+            }
+            .ctrl_game{
+                width: 170px;
+                margin: 10px auto;
+            }
+            .ctrl_game input[type="button"]{
+                width: 80px;
+                height: 40px;
+                font-size: 14px;
+            }
+            .ctrl_game_level {
+                width: 200px;
+                margin: 10px 0;
+            }
+            
+            .ctrl_game_level input[type="button"]{
+                width: 60px;
+                height: 40px;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+
+
+            .row{
+                height: 20px;
+                /*border: 1px solid red;*/
+                background: rgb(181,68,52);
+            }
+            .col{
+                width: 20px;
+                height: 20px;
+                border: 1px solid black;
+                box-sizing: border-box;
+                float: left;
+            }
+            .activeSnake{
+                background: rgb(178,143,206);
+            }
+            .food{
+                background: green;
+            }
+            .lemon{
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <h2>贪吃蛇</h2>
+            <div id="snakeMap">
+
+            </div>
+            <div class="ctrl">
+                <div class="ctrl_info">
+                    <span class="ctrl_title">信息区</span>
+                    <span>玩家得分：<p id="score">0</p></span><br>
+                    <span>游戏帮助：
+                        <p>
+                            &nbsp;&nbsp;利用键盘的上下左右方向键控制贪吃蛇运动的方向
+                        </p>
+                        <p>
+                            &nbsp;&nbsp;游戏控制区有暂停和开始按键，还可以选择游戏等级模式
+                        </p>
+                    </span>
+                </div>
+                <div class="ctrl_rank">
+                    <span class="ctrl_title">玩家排名榜</span>
+                </div>
+                <div class="ctrl_select">
+                    <span class="ctrl_title">游戏控制</span>
+                    <div class="ctrl_game">
+                        <input type="button" value="开始游戏" id="start">
+                        <input type="button" value=" 暂  停 " id="pause">
+                        
+                    </div>
+                    <div class="ctrl_game_level">
+                        <span>游戏模式</span><br>
+                        <input type="button" value="简单" id="easy">
+                        <input type="button" value="困难" id="diff">
+                        <input type="button" value="高难度" id="h_diff">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="lemon_string_chart.js"></script>
+    <script type="text/javascript" src="game_tanchishe_ctrl.js"></script>
+</html>
